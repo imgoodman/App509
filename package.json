@@ -1,0 +1,29 @@
+{
+  "name": "app509",
+  "version": "1.0.0",
+  "description": "node express CRUD",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imgoodman/App509.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "crud"
+  ],
+  "author": "jan8611@163.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imgoodman/App509/issues"
+  },
+  "homepage": "https://github.com/imgoodman/App509#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-handlebars": "^3.0.0",
+    "mongoose": "^4.4.12"
+  }
+}

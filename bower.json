@@ -1,0 +1,28 @@
+{
+  "name": "app509",
+  "description": "node express CRUD",
+  "main": "app.js",
+  "authors": [
+    "jan8611@163.com"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "node",
+    "express",
+    "crud"
+  ],
+  "homepage": "https://github.com/imgoodman/App509",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "font-awesome": "fontawesome#^4.6.1",
+    "jquery-validation": "^1.15.0"
+  }
+}
