@@ -1,0 +1,11 @@
+module.exports={
+	cookieSecret:'goodman',
+	mongo:{
+		development:{
+			connectionString:'mongodb://localhost/movie'
+		},
+		production:{
+			connectionString:''
+		}
+	}
+};

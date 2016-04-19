@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+	<div class="panel-heading">
+		<div class="panel-title">电影分类列表</div>
+	</div>
+	<div class="panel-body">
+		<div class="row">
+			<div class="col-lg-4">
+				<a href="/movie_category/create" class="btn btn-success"><i class="fa fa-fw fa-plus"></i>新增电影分类</a>
+			</div>
+			<div class="col-lg-offset-4 col-lg-4 text-right">
+				<div class="input-group">
+					<input type="text" class="form-control" name="name" placeholder="请输入电影分类名称..."></input>
+					<span class="input-group-btn">
+						<button class="btn btn-primary" type="button"><i class="fa fa-fw fa-search"></i>检索</button>
+					</span>
+				</div>
+			</div>			
+		</div>
+		<hr>
+		<table class="table table-hover table-striped">
+			<thead>
+				<tr>
+					<th style="width: 50px;">
+						<input type="checkbox"></input>
+					</th>
+					<th style="width: 50px;">序号</th>
+					<th>名称</th>
+					<th>注释</th>
+					<th style="width: 100px;"></th>
+					<th style="width: 100px;"></th>
+				</tr>
+			</thead>
+			<tbody>
+				{{#each movie_categories}}
+					<tr>
+						<td>
+							<input type="checkbox"></input>
+						</td>
+						<td>{{@index}}</td>
+						<td>{{name}}</td>
+						<td>{{remarks}}</td>
+						<td>
+							<a href="/movie_category/update/{{id}}" class="btn btn-default"><i class="fa fa-fw fa-edit"></i>编辑</a>
+						</td>
+						<td>
+							<form action="/movie_category/delete/{{id}}" method="post">
+								<button type="submit" class="btn btn-danger"><i class="fa fa-fw fa-remove"></i>删除</button>
+							</form>
+						</td>
+					</tr>
+				{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>

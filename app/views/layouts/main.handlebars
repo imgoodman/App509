@@ -4,14 +4,43 @@
 	<title>{{title}}</title>
 	<link rel="stylesheet" type="text/css" href="/libs/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/libs/font-awesome/css/font-awesome.min.css">
+	{{{_sections.head}}}
 </head>
 <body>
+	<div class="navbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="/" class="navbar-brand">电影网站</a>
+			</div>
+			<div class="navbar-collapse collapse" id="bs-example">
+				<ul class="navbar-nav nav">
+					<li><a href="/movie_category/list" class="active">电影分类</a></li>
+					<li><a href="/movie/list">电影列表</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<div class="container">
+		{{#if flash}}
+			<div class="row">
+				<div class="alert alert-dismissible alert-{{flash.type}}">
+					<button class="close" type="button" data-dismiss="alert" aria-hidden="true">&times;</button>
+					<strong>{{flash.intro}}</strong>{{{flash.message}}}
+				</div>
+			</div>
+		{{/if}}
 		<div class="row">
 			{{{body}}}
 		</div>
 	</div>
 	<script type="text/javascript" src="/libs/jquery/dist/jquery.min.js"></script>
 	<script type="text/javascript" src="/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+	{{{_sections.js}}}
 </body>
 </html>
