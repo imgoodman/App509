@@ -61,6 +61,7 @@ app.post('/movie_category/delete/:id',movie_category.delete);
 var movie=require('./app/controllers/movie');
 app.get('/movie/list',movie.list);
 app.get('/movie/create',movie.showCreate);
+app.post('/movie/create',movie.save);
 
 //404
 app.use(function(req,res){
